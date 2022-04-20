@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - SavePoint
+  - Enemy
+  - HUD
+  - Menu
+  - Winning Zone
+  - Face
+  - Turret Shoot Point
+  - LaserBullet
+  - Water
+  - Player Shoot Point
+  - ENEMY
+  - Winning Zone 1
+  - Winning Zone 2
+  - Winning Zone 3
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - Post Process
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
