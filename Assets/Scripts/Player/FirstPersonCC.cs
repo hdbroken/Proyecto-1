@@ -26,9 +26,8 @@ public class FirstPersonCC : MonoBehaviour
     private CharacterController _ccPlayer;
     private Camera _headCamera;
 
-    private Shoot _fire;
-    private Animator _playerAnimator;
-
+    private Shoot _fire;    
+    private PlayerAnimationController _animatorController;
     private void OnPausedGameEvent(bool obj)
     {
         this.enabled = !obj;
@@ -38,7 +37,7 @@ public class FirstPersonCC : MonoBehaviour
     {
         EventManager.onPauseGame += OnPausedGameEvent;
 
-        _playerAnimator = GetComponent<Animator>();
+        _animatorController = GetComponent<PlayerAnimationController>();        
         _ccPlayer = GetComponent<CharacterController>();
         _headCamera = GetComponentInChildren<Camera>();
         _fire = GetComponent<Shoot>();
@@ -160,9 +159,9 @@ public class FirstPersonCC : MonoBehaviour
         StartCoroutine(SmoothLook());
     }
 
-    public void StopMove(bool move)
-    {        
-        _playerAnimator.enabled = !move;
+    public void StopAnimation()
+    {
+        _animatorController.Desactivate();   
     }
 
     /*IEnumerator MoveCamera(float time)

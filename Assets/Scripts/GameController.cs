@@ -70,7 +70,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator ToDie()
     {        
-        _moveController.StopMove(true);
+        _moveController.StopAnimation();
         _moveController.LookOnDeath();        
 
         _globalVolume.Death();
@@ -80,8 +80,7 @@ public class GameController : MonoBehaviour
         InitialPosition();
 
         _globalVolume.Alive();
-        GameManager.instance.playerIsAlive = true;
-        _moveController.StopMove(false);        
+        GameManager.instance.playerIsAlive = true;        
     }
     private void OnPlayerDieEvent()
     {
