@@ -594,6 +594,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Initial UI
       objectReference: {fileID: 0}
+    - target: {fileID: 8979882692948595732, guid: 16afd011539af3c45bbcffb0fbd11a41, type: 3}
+      propertyPath: m_text
+      value: Proyecto Final
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 16afd011539af3c45bbcffb0fbd11a41, type: 3}
 --- !u!114 &5894356123262531366 stripped
