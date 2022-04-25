@@ -21,29 +21,29 @@ public class GameController : MonoBehaviour
     private Scene _scene;
     private Vector3 _initialPosition;
     private float _initialRotationDegrees;
-    private FirstPersonCC _moveController;    
+    private FirstPersonCC _moveController;
 
     private void OnEnable()
     {
         EventManager.onPauseGame += OnGamePauseEvent;
         EventManager.onPauseGameWithMenu += OnGamePauseWithMenuEvent;
-        EventManager.onPlayerDie += OnPlayerDieEvent;      
+        EventManager.onPlayerDie += OnPlayerDieEvent;
     }
 
     private void OnDisable()
     {
         EventManager.onPauseGame -= OnGamePauseEvent;
         EventManager.onPauseGameWithMenu -= OnGamePauseWithMenuEvent;
-        EventManager.onPlayerDie -= OnPlayerDieEvent;       
+        EventManager.onPlayerDie -= OnPlayerDieEvent;
     }
 
     private void Awake()
-    {        
+    {
         _moveController = _player.GetComponent<FirstPersonCC>();
         _scene = SceneManager.GetActiveScene();
-        
+
         _initialPosition = _player.transform.position;
-        _initialRotationDegrees = _player.transform.rotation.eulerAngles.y;        
+        _initialRotationDegrees = _player.transform.rotation.eulerAngles.y;
     }
 
     private void OnGamePauseEvent(bool isPausedGame)
@@ -51,7 +51,7 @@ public class GameController : MonoBehaviour
         if (isPausedGame == true)
             Time.timeScale = 0;
         else
-            Time.timeScale = 1;        
+            Time.timeScale = 1;
     }
 
     private void OnGamePauseWithMenuEvent(bool isPausedGame)
@@ -69,25 +69,28 @@ public class GameController : MonoBehaviour
     }
 
     IEnumerator ToDie()
-    {        
+    {
         _moveController.StopAnimation();
-        _moveController.LookOnDeath();        
+        _moveController.LookOnDeath();
 
         _globalVolume.Death();
 
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(6f);
 
         InitialPosition();
-
-        _globalVolume.Alive();
-        GameManager.instance.playerIsAlive = true;        
+        yield return new WaitForFixedUpdate();
+        _globalVolume.Alive();        
+        GameManager.instance.playerIsAlive = true;
     }
     private void OnPlayerDieEvent()
     {
-        GameManager.instance.tries += 1;
-        GameManager.instance.playerIsAlive = false;
-        
-        StartCoroutine(ToDie());
+        if (GameManager.instance.playerIsAlive)
+        {
+            GameManager.instance.tries += 1;
+            GameManager.instance.playerIsAlive = false;
+
+            StartCoroutine(ToDie());
+        }
         //StartCoroutine(ReloadScene());        
     }
 

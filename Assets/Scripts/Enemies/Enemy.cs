@@ -80,6 +80,7 @@ public class Enemy : EnemyBase
                 {
                     _canShoot = false;
                     Shoot();
+                    StartCoroutine(TimeToNextShoot());
                 }
             }
         }
