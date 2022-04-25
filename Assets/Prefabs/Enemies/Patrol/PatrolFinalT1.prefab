@@ -244,7 +244,6 @@ GameObject:
   - component: {fileID: 7871835338391677188}
   - component: {fileID: 7871835338391677191}
   - component: {fileID: 7871835338391677190}
-  - component: {fileID: 6134576050902715805}
   m_Layer: 0
   m_Name: PatrolFinalT1
   m_TagString: Enemy
@@ -315,19 +314,6 @@ MonoBehaviour:
   speed: 2
   timeToTurn: 25
   rotationSpeed: 40
---- !u!114 &6134576050902715805
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7871835338391677208}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 506b782399ccd214e89c529bc0470c9b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bean: {fileID: 7864427182884768389, guid: 0a85cd6ac30eb794f82dd24a9867af00, type: 3}
 --- !u!1001 &7871835339604635289
 PrefabInstance:
   m_ObjectHideFlags: 0
