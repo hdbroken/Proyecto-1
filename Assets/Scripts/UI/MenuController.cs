@@ -9,7 +9,7 @@ using UnityEngine.Events;
 public class MenuController : MonoBehaviour
 {
     [SerializeField]
-    private string _nameInitialScene = "Level1";
+    private string _nameInitialScene = "Tutorial";
 
     [SerializeField]
     private GameObject _animationStartGame = null;

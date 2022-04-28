@@ -9,18 +9,62 @@ public class Tutorial : MonoBehaviour
     private GameObject _panel;
 
     [SerializeField]
-    private TextMeshProUGUI _text1;
+    private TextMeshProUGUI _text;
 
     [SerializeField]
-    private string _textTutorial;
+    private string _textOnScreen;
+
+    [SerializeField]
+    private TutorialName _tutorialName;
+    [SerializeField]
+    private int _tutorialNumber = 0;
+
+    //private Dictionary<TutorialName, int> _tutorial = new Dictionary<TutorialName, int>();
+    public enum TutorialName
+    {
+        Turret,
+        Walker,
+        Finish
+    }
+
+    private TutorialData _tutorial;
+    public struct TutorialData
+    {
+        public TutorialName name;
+        public int number;
+    }
+
+    private void Awake()    
+    {
+        _tutorial.name = _tutorialName;
+        _tutorial.number = _tutorialNumber;        
+    }
+
+    private void Start()
+    {
+        GameManager.instance.AddTutorial(_tutorial);
+    }
+
+    private void Update()
+    {
+        if(GameManager.instance.tutorialSeen[_tutorial] && Input.GetKeyDown(KeyCode.Space))        
+        {
+            _panel.SetActive(false);
+            this.gameObject.SetActive(false);
+            EventManager.onPauseGame?.Invoke(false);
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            this.gameObject.SetActive(false);
-            EventManager.onPauseGame?.Invoke(true);
+            GameManager.instance.tutorialSeen[_tutorial] = true;
             
+            _text.text = _textOnScreen;
+            _panel.SetActive(true);
+            EventManager.onPauseGame?.Invoke(true); 
         }
-    }
+    }   
+    
 }
