@@ -740,6 +740,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 485808882}
     - target: {fileID: 1029881661, guid: 9af366fbbb0fa3145858e9c924d94011, type: 3}
+      propertyPath: _textOnScreen
+      value: Estos vigilantes patrullan y tienen un campo de vision frente de ellos,
+        funcionan de manera similar a las torretas.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1029881661, guid: 9af366fbbb0fa3145858e9c924d94011, type: 3}
       propertyPath: _tutorialName
       value: 1
       objectReference: {fileID: 0}
