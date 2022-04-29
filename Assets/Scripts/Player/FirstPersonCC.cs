@@ -28,6 +28,7 @@ public class FirstPersonCC : MonoBehaviour
 
     private Shoot _fire;    
     private PlayerAnimationController _animatorController;
+
     private void OnPausedGameEvent(bool obj)
     {
         this.enabled = !obj;
