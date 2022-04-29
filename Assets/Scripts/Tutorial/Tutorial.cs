@@ -14,14 +14,16 @@ public class Tutorial : MonoBehaviour
     [SerializeField]
     private string _textOnScreen;
 
+    
     [SerializeField]
     private TutorialName _tutorialName;
+    
     [SerializeField]
     private int _tutorialNumber = 0;
-
-    //private Dictionary<TutorialName, int> _tutorial = new Dictionary<TutorialName, int>();
+        
     public enum TutorialName
     {
+        Keyboard,
         Turret,
         Walker,
         Finish

@@ -30,7 +30,7 @@ Transform:
   m_LocalScale: {x: 1, y: 4.911443, z: 30.05101}
   m_Children: []
   m_Father: {fileID: 1345168434077283599}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1029881662
 BoxCollider:
@@ -61,7 +61,7 @@ MonoBehaviour:
   _text: {fileID: 0}
   _textOnScreen: Estos vigilantes patrullan y tienen un campo de vision frente de
     ellos, funcionan de manera similar a las torretas.
-  _tutorialName: 1
+  _tutorialName: 2
   _tutorialNumber: 0
 --- !u!1 &105544837393893013
 GameObject:
@@ -665,68 +665,6 @@ Transform:
   m_Father: {fileID: 3679672878420112342}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &237337560304005884
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6247627508517888134}
-  - component: {fileID: 4913729774187547034}
-  - component: {fileID: 7365504605717820922}
-  m_Layer: 0
-  m_Name: Tutorial Walker (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &6247627508517888134
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 237337560304005884}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -126.92, y: 1.888, z: -4.7888}
-  m_LocalScale: {x: 1, y: 4.911443, z: 30.05101}
-  m_Children: []
-  m_Father: {fileID: 1345168434077283599}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4913729774187547034
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 237337560304005884}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7365504605717820922
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 237337560304005884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be056beb4f66ac44d9136e9be10112e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _panel: {fileID: 0}
-  _text: {fileID: 0}
-  _textOnScreen: 
-  _tutorialName: 1
-  _tutorialNumber: 1
 --- !u!1 &358829737010173577
 GameObject:
   m_ObjectHideFlags: 0
@@ -1500,10 +1438,10 @@ Transform:
   m_Children:
   - {fileID: 6092663593448912860}
   - {fileID: 2191171221886783760}
+  - {fileID: 1359614619582978513}
   - {fileID: 4556189485224884421}
   - {fileID: 59421310090056237}
   - {fileID: 1029881660}
-  - {fileID: 6247627508517888134}
   - {fileID: 3781601240064772326}
   - {fileID: 9174136565128554530}
   m_Father: {fileID: 0}
@@ -1667,6 +1605,71 @@ Transform:
   m_Father: {fileID: 8298413438966201520}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1496146747679403027
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1359614619582978513}
+  - component: {fileID: 8100630614472588149}
+  - component: {fileID: 1758279845816733112}
+  m_Layer: 0
+  m_Name: Tutorial Keyboard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1359614619582978513
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496146747679403027}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -56.38, y: 1.888, z: -4.7888}
+  m_LocalScale: {x: 1, y: 4.911443, z: 30.05101}
+  m_Children: []
+  m_Father: {fileID: 1345168434077283599}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &8100630614472588149
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496146747679403027}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1758279845816733112
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496146747679403027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be056beb4f66ac44d9136e9be10112e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _panel: {fileID: 0}
+  _text: {fileID: 0}
+  _textOnScreen: '"W A S D" para mover el player.                                         
+    "Shift" para correr.                                                                  
+    "Mouse" para mirar.                                           "H" para activar
+    hud.                                                                '
+  _tutorialName: 0
+  _tutorialNumber: 0
 --- !u!1 &1647940332521954812
 GameObject:
   m_ObjectHideFlags: 0
@@ -2906,7 +2909,7 @@ Transform:
   m_LocalScale: {x: 1, y: 4.911443, z: 30.05101}
   m_Children: []
   m_Father: {fileID: 1345168434077283599}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &3109853978519200048
 BoxCollider:
@@ -2938,7 +2941,7 @@ MonoBehaviour:
   _textOnScreen: En este punto esta apuntandote, puedes dispararle para desactivarla
     brevemente. Maneten presionado el segundo boton del mouse y presiona el primer
     boton.
-  _tutorialName: 0
+  _tutorialName: 1
   _tutorialNumber: 1
 --- !u!1 &4407731591637129952
 GameObject:
@@ -5686,8 +5689,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6526291312031140137}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -166.22, y: 1.888, z: -4.7888}
-  m_LocalScale: {x: 1, y: 4.911443, z: 30.05101}
+  m_LocalPosition: {x: -167.33, y: 1.888, z: -4.7888}
+  m_LocalScale: {x: 1, y: 4.911443, z: 4.15}
   m_Children: []
   m_Father: {fileID: 1345168434077283599}
   m_RootOrder: 6
@@ -5720,7 +5723,7 @@ MonoBehaviour:
   _panel: {fileID: 0}
   _text: {fileID: 0}
   _textOnScreen: La plataforma frente a ti es la zona que te permite avanzar de nivel.
-  _tutorialName: 2
+  _tutorialName: 3
   _tutorialNumber: 0
 --- !u!1 &6580436823427985760
 GameObject:
@@ -6052,7 +6055,7 @@ Transform:
   m_LocalScale: {x: 1, y: 4.911443, z: 30.05101}
   m_Children: []
   m_Father: {fileID: 1345168434077283599}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &9152390452469628025
 BoxCollider:
@@ -6083,7 +6086,7 @@ MonoBehaviour:
   _text: {fileID: 0}
   _textOnScreen: La torreta frente a ti te apuntara al entrar en su rango de vision,
     si sigues acercandote te disparara hasta que te alejes o la desactives.
-  _tutorialName: 0
+  _tutorialName: 1
   _tutorialNumber: 0
 --- !u!1 &7273912896985999885
 GameObject:

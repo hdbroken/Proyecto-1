@@ -12,9 +12,6 @@ public class GlobalPPController : MonoBehaviour
     private Vignette _vignette;   
     private float _timer=0;
 
-    //[SerializeField]
-    //private float timeToFadeOut = 0;
-
     private void Awake()
     {
         _globalPPVolume = GetComponent<PostProcessVolume>();

@@ -36,7 +36,7 @@ public class HudController : MonoBehaviour
     public void OnActivateHudEvent()
     {
         _triesHud.SetActive(!_triesHud.activeSelf);
-        _displayTries.text = ("Tries: " + GameManager.instance.tries);
+        _displayTries.text = ("Intentos: " + GameManager.instance.tries);
     }
 
     private void OnWinLevelEvent()

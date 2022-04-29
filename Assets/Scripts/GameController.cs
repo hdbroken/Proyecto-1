@@ -63,7 +63,7 @@ public class GameController : MonoBehaviour
 
     IEnumerator ReloadScene()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(6f);
         SceneManager.LoadScene(_scene.name);
         GameManager.instance.playerIsAlive = true;
     }
@@ -90,8 +90,22 @@ public class GameController : MonoBehaviour
             GameManager.instance.playerIsAlive = false;
 
             StartCoroutine(ToDie());
+        }        
+    }
+
+    private void OnPlayerSuccessEvent()
+    {
+        if (GameManager.instance.playerIsAlive)
+        {
+            _moveController.StopAnimation();
+
         }
-        //StartCoroutine(ReloadScene());        
+    }
+
+    private void OnReloadSceneEvent()
+    {
+        SceneManager.LoadScene(_scene.name);
+        GameManager.instance.tries = 0;
     }
 
     public void InitialPosition()
@@ -100,4 +114,6 @@ public class GameController : MonoBehaviour
         _moveController.hMouse = _initialRotationDegrees;
         _moveController.vMouse = 0;
     }
+
+
 }
